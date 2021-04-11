@@ -1,4 +1,5 @@
 ' https://medium.com/@bhupathy/install-terminator-on-windows-with-wsl-2826591d2156
+
 set shell = WScript.CreateObject("Shell.Application")
 
 if not IsProcessRunning("vcxsrv.exe") then
@@ -14,6 +15,7 @@ args = "bash" & " -c ""cd " & myCd & "; DISPLAY=$(cat /etc/resolv.conf | grep na
 WScript.CreateObject("Shell.Application").ShellExecute "C:\Windows\System32\wsl.exe", args, "", "open", 0
 
 ' https://stackoverflow.com/questions/19794726/vb-script-how-to-tell-if-a-program-is-already-running
+
 Function IsProcessRunning( strProcess )
 	Dim Process, strObject
 	IsProcessRunning = False
